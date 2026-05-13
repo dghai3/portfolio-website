@@ -16,6 +16,26 @@ export type HeroContent = {
   links: SocialLink[]
 }
 
+export type AboutCard = {
+  label: string
+  value: string
+  featured?: boolean
+}
+
+export type AboutTextSegment = {
+  text: string
+  highlight?: boolean
+}
+
+export type AboutContent = {
+  id: string
+  index: string
+  title: string
+  paragraph: AboutTextSegment[]
+  productLoop: string[]
+  cards: AboutCard[]
+}
+
 export type SectionContent = {
   id: string
   index: string
