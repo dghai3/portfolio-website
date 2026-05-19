@@ -1,7 +1,5 @@
 import type { ReactNode } from 'react'
-import { StarField } from '../background/StarField'
 import { Header } from '../navigation/Header'
-import { navItems } from '../../routes/appRoutes'
 
 type AppLayoutProps = {
   children: ReactNode
@@ -9,10 +7,9 @@ type AppLayoutProps = {
 
 export function AppLayout({ children }: AppLayoutProps) {
   return (
-    <main className="site">
-      <StarField />
-      <Header brand="Dhruv Ghai" navItems={navItems} />
-      {children}
-    </main>
+    <div style={{ background: 'var(--bg)', minHeight: '100svh' }}>
+      <Header />
+      <main style={{ paddingTop: '65px' }}>{children}</main>
+    </div>
   )
 }

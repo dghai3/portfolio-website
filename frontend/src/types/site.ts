@@ -3,42 +3,48 @@ export type NavItem = {
   href: string
 }
 
-export type SocialLink = {
-  label: string
-  href: string
-  isExternal?: boolean
-}
-
 export type HeroContent = {
   name: string
-  title: string
-  description: string
-  links: SocialLink[]
-}
-
-export type AboutCard = {
-  label: string
-  value: string
-  featured?: boolean
-}
-
-export type AboutTextSegment = {
-  text: string
-  highlight?: boolean
+  role: string
+  location: string
+  status: string
 }
 
 export type AboutContent = {
-  id: string
-  index: string
-  title: string
-  paragraph: AboutTextSegment[]
-  productLoop: string[]
-  cards: AboutCard[]
+  paragraphs: string[]
 }
 
-export type SectionContent = {
+export type WorkEntry = {
   id: string
-  index: string
   title: string
-  description: string
+  subtitle: string
+  year: string
+  role: string
+  path: string
+}
+
+
+export type ContactContent = {
+  email: string
+  github: string
+  linkedin: string
+  arxiv: string
+}
+
+export type CaseStudyMeta = {
+  id: string
+  title: string
+  year: string
+  role: string
+  stack: string[]
+  path: string
+}
+
+export type CaseStudySection = {
+  heading: 'Problem' | 'Approach' | 'Outcome'
+  body: string
+}
+
+export type CaseStudy = CaseStudyMeta & {
+  sections: CaseStudySection[]
 }

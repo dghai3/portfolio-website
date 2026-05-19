@@ -1,17 +1,15 @@
 import type { NavItem } from '../types/site'
 
 export const navItems: NavItem[] = [
-  { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Beyond Engineering', href: '#beyond' },
+  { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
 
-export const appRoutes = [
-  {
-    path: '/',
-    label: 'Home',
-  },
+export const caseStudyRoutes = [
+  { path: '/work/cognitomeai', id: 'cognitomeai' },
+  { path: '/work/varonova', id: 'varonova' },
+  { path: '/work/clearcare', id: 'clearcare' },
+  { path: '/work/research-tiny-recursive-models', id: 'research-tiny-recursive-models' },
 ]

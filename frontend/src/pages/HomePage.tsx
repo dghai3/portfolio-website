@@ -1,16 +1,21 @@
-import { SectionShell } from '../components/common/SectionShell'
-import { aboutContent, heroContent, sections } from '../data/profile'
+import { aboutContent, contactContent, experienceEntries, heroContent, projectEntries } from '../data/profile'
 import { AboutSection } from '../sections/AboutSection'
+import { ContactSection } from '../sections/ContactSection'
 import { HeroSection } from '../sections/HeroSection'
+import { WorkSection } from '../sections/WorkSection'
 
 export function HomePage() {
   return (
     <>
       <HeroSection content={heroContent} />
+      <hr />
+      <WorkSection id="experience" heading="Experience" entries={experienceEntries} />
+      <hr />
+      <WorkSection id="projects" heading="Projects" entries={projectEntries} />
+      <hr />
       <AboutSection content={aboutContent} />
-      {sections.map((section) => (
-        <SectionShell key={section.id} section={section} />
-      ))}
+      <hr />
+      <ContactSection content={contactContent} />
     </>
   )
 }
